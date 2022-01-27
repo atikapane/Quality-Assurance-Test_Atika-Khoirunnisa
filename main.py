@@ -23,6 +23,15 @@ class MakeOverAll(unittest.TestCase):
         # pop up should be closed
         assert popup.is_popup_closed(), "button (X) did not close the pop up"
     
+    def test_close_popup2(self):
+        # close pop up by clicking close (X)
+        driver = self.driver
+        popup = page.PopUp(self.driver)
+        popup.click_close_button()
+        # pop up should be closed
+        assert popup.is_popup_closed(), "button (X) did not close the pop up"
+    
+
     def test_subscribe_without_email(self):
         # click subscribe button without entering email address
         driver = self.driver
